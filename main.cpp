@@ -12,7 +12,7 @@
 // Pole argv obsahuje jednotlive argumenty z prikazove radky
 std::string nazev_z_prikazove_radky(int argc, char* argv[]) {
     if (argc < 2)
-        throw std::runtime_error("jmena.dat");
+    	 std::cout<<"Musite zadat nazev vstupniho souboru"; 
 
     return std::string(argv[1]);
 }
@@ -33,13 +33,12 @@ int main(int argc, char* argv[]) {
     // Zacatek mereni CPU casu
     clock_t start = clock();
 
-    insertion_sort(jmena);
-
+    serad(jmena);
     // Konec mereni CPU casu
     clock_t end = clock();
     float seconds = (float)(end - start) / CLOCKS_PER_SEC;
 
-    std::cout << "Hotovo. Serazeni trvalo " << seconds << " sekundy." <<  std::endl << std::endl;
+    std::cout << "Hotovo. Serazeni trvalo " << seconds << " sekundy." << std::endl;
 
   
     if (zeptej_se_jestli_vypsat()) {
